@@ -205,6 +205,91 @@ window.addEventListener('click', (e) => {
 
 // Simple CV image display - no complex PDF viewer needed
 
+// 导航栏滚动效果和活动状态
+(function initNavigation() {
+  const nav = document.querySelector('.nav');
+  const navLinks = document.querySelectorAll('.nav a[href^="#"]');
+  const sections = document.querySelectorAll('section[id]');
+  
+  if (!nav || navLinks.length === 0 || sections.length === 0) {
+    console.warn('Navigation elements not found');
+    return;
+  }
+  
+  let ticking = false;
+  
+  // 滚动时添加阴影效果和更新活动状态
+  function handleScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        // 添加滚动阴影
+        if (window.scrollY > 50) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+        
+        // 更新活动导航项
+        updateActiveNav();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  
+  // 更新活动导航项
+  function updateActiveNav() {
+    let current = 'about'; // 默认为第一个section
+    const scrollPosition = window.scrollY + 100; // 固定导航栏，调整偏移量
+    
+    // 从后往前检查，确保最后一个匹配的section被选中
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = sections[i];
+      const sectionTop = section.offsetTop - 65; // 减去导航栏高度
+      
+      if (scrollPosition >= sectionTop) {
+        current = section.getAttribute('id');
+        break;
+      }
+    }
+    
+    // 更新导航链接状态
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  // 平滑滚动到目标区域
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      
+      if (targetSection) {
+        const targetPosition = targetSection.offsetTop - 85; // 导航栏高度 + 20px间距
+        
+        window.scrollTo({
+          top: Math.max(0, targetPosition),
+          behavior: 'smooth'
+        });
+        
+        // 立即更新活动状态
+        setTimeout(() => updateActiveNav(), 100);
+      }
+    });
+  });
+  
+  // 监听滚动事件
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  
+  // 初始化
+  handleScroll();
+})();
+
 // 高级鼠标交互：丝滑的透明度、浮动和缩放效果
 (function initAdvancedWordInteraction() {
   const hero = document.querySelector('.hero');
