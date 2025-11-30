@@ -7,7 +7,7 @@
     <meta name="description" content="ZHENG QI — AI + Design + Human Factors" />
     <title>ZHENG QI — AI + Design + Human Factors</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Spectral:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=6" />
+    <link rel="stylesheet" href="css/styles.css?v=7" />
   </head>
   <body>
     <header class="hero">
@@ -73,7 +73,7 @@
                   </div>
                   <p class="duration">Sep. 2023 – Jun. 2025</p>
                 </div>
-                <p class="achievement">• GPA: 3.9/4.0 | Rank: 35/119</p>
+                <p class="achievement">• GPA: 3.91/4.0 | Rank: 24/120</p>
               </div>
               <div class="education-item">
                 <div class="education-header">
@@ -117,9 +117,7 @@
                     <span class="badge">¥2.1M Seed Funding</span>
                   </div>
                 </div>
-                <figure class="work-visual">
-                  <img src="images/portfolio/allotech-platform.jpg" alt="AlloTech Platform" />
-                </figure>
+                <img src="images/logos/ALLOTECH.png" alt="AlloTech" class="company-logo-right" />
               </article>
               
               <article class="work-card">
@@ -128,9 +126,10 @@
                   <p class="meta">2024 | LBS Prediction & A/B Experiment Design</p>
                   <p>Developed ML pipelines for location-based behavior prediction and experimentation optimization across >100M samples.</p>
                 </div>
-                <figure class="work-visual">
-                  <img src="images/portfolio/bytedance-ml.jpg" alt="ByteDance ML Pipeline" />
-                </figure>
+                <div class="company-logos-group">
+                  <img src="images/logos/bytedance.png" alt="ByteDance" class="company-logo-right" />
+                  <img src="images/logos/tiktok.png" alt="TikTok" class="company-logo-right" />
+                </div>
               </article>
               
               <article class="work-card">
@@ -139,9 +138,7 @@
                   <p class="meta">2024 | SFT & RLHF Data Optimization</p>
                   <p>Fine-tuned large language models with advanced data cleaning and bias reduction techniques, improving dataset quality by 12%.</p>
                 </div>
-                <figure class="work-visual">
-                  <img src="images/portfolio/meituan-llm.jpg" alt="Meituan LLM Pipeline" />
-                </figure>
+                <img src="images/logos/meituan.png" alt="Meituan" class="company-logo-right" />
               </article>
             </div>
           </div>
@@ -184,70 +181,78 @@
             <p class="muted">AI × Design × Human Factors</p>
           </div>
           
-          <div class="portfolio-showcase">
-            <div class="portfolio-nav">
-              <button class="nav-btn prev" data-dir="-1">‹</button>
-              <button class="nav-btn next" data-dir="1">›</button>
-            </div>
-            
-            <div class="portfolio-slider">
-              <article class="portfolio-slide active" data-slide="0">
-                <figure class="portfolio-hero">
-                  <img src="images/portfolio/arcasia-thesis.jpg" alt="ARCASIA Gold Award Thesis" />
-                </figure>
-                <div class="portfolio-details">
-                  <h3>ARCASIA Gold Award Thesis</h3>
-                  <h4>"Emotive Intelligence in Spatial Systems"</h4>
-                  <p class="meta">2023 | Awarded by Rem Koolhaas (Harvard GSD) & ARCASIA Jury</p>
-                  <p>An intelligent spatial system capable of sensing user emotion and adapting environmental parameters in real time. This thesis explores the intersection of affective computing, spatial design, and human-centered AI, proposing a new paradigm for responsive architectural environments.</p>
-                  <div class="portfolio-tags">
-                    <span class="tag">Affective Computing</span>
-                    <span class="tag">Spatial Intelligence</span>
-                    <span class="tag">Real-time Adaptation</span>
-                  </div>
-                </div>
-              </article>
-              
-              <article class="portfolio-slide" data-slide="1">
-                <figure class="portfolio-hero">
-                  <img src="images/portfolio/uia-hop-cup.jpg" alt="UIA Hop Cup" />
-                </figure>
-                <div class="portfolio-details">
-                  <h3>UIA Hop Cup — 1st Place</h3>
-                  <h4>"Interactive Urban Commons"</h4>
-                  <p class="meta">2021 | International Urban Design Competition</p>
-                  <p>An experimental prototype for interactive urban public spaces that combines human behavioral data with generative form optimization. The project demonstrates how AI can inform responsive urban design that adapts to community needs and usage patterns.</p>
-                  <div class="portfolio-tags">
-                    <span class="tag">Urban Design</span>
-                    <span class="tag">Generative Form</span>
-                    <span class="tag">Public Space</span>
-                  </div>
-                </div>
-              </article>
-              
-              <article class="portfolio-slide" data-slide="2">
-                <figure class="portfolio-hero">
-                  <img src="images/portfolio/ai-office-system.jpg" alt="AI Integrated Office System" />
-                </figure>
-                <div class="portfolio-details">
-                  <h3>AI-Integrated Office System</h3>
-                  <h4>"Adaptive Environmental Intelligence"</h4>
-                  <p class="meta">2023 | Xiong'an New Area Project</p>
-                  <p>A computational framework for personalized environmental control that merges IoT sensing with machine learning for comfort prediction. The system learns individual preferences and optimizes lighting, temperature, and air quality in real-time.</p>
-                  <div class="portfolio-tags">
-                    <span class="tag">IoT Integration</span>
-                    <span class="tag">Comfort Prediction</span>
-                    <span class="tag">Smart Buildings</span>
-                  </div>
-                </div>
-              </article>
-            </div>
-            
-            <div class="portfolio-indicators">
-              <button class="indicator active" data-slide="0"></button>
-              <button class="indicator" data-slide="1"></button>
-              <button class="indicator" data-slide="2"></button>
-            </div>
+          <div class="pipeline-grid">
+            <!-- Pipeline 1: VIBE CREATING -->
+            <article class="pipeline-card" onclick="window.location.href='portfolio.html#project-1'" style="cursor: pointer;">
+              <div class="pipeline-info">
+                <h3>VIBE CREATING</h3>
+                <h4>AI-Driven Manufacturable Design Platform</h4>
+                <p class="meta">2025.05 - Present · Co-founder & COO</p>
+                <ul class="pipeline-tags">
+                  <li>Text-to-CAD</li>
+                  <li>MCP toolchains</li>
+                  <li>3D assembly automation</li>
+                </ul>
+              </div>
+              <figure class="pipeline-image" onclick="event.stopPropagation(); openImageModal(this.querySelector('img'))">
+                <img src="images/portfolio_PAGES/PIPE1.png" alt="VIBE CREATING" />
+              </figure>
+            </article>
+
+            <!-- Pipeline 2: URBAN PULSE -->
+            <article class="pipeline-card" onclick="window.location.href='portfolio.html#project-2'" style="cursor: pointer;">
+              <div class="pipeline-info">
+                <h3>URBAN PULSE</h3>
+                <h4>Metro Station Environmental Assessment</h4>
+                <p class="meta">2022.08 - 2023.03 · Researcher & Designer</p>
+                <ul class="pipeline-tags">
+                  <li>Urban computing</li>
+                  <li>FCN segmentation</li>
+                  <li>GIS metrics</li>
+                </ul>
+                <span class="badge-individual">Individual work</span>
+              </div>
+              <figure class="pipeline-image" onclick="event.stopPropagation(); openImageModal(this.querySelector('img'))">
+                <img src="images/portfolio_PAGES/PIPE2.png" alt="URBAN PULSE" />
+              </figure>
+            </article>
+
+            <!-- Pipeline 3: HOMES BY AI -->
+            <article class="pipeline-card" onclick="window.location.href='portfolio.html#project-3'" style="cursor: pointer;">
+              <div class="pipeline-info">
+                <h3>HOMES BY AI</h3>
+                <h4>Automated Housing Generation</h4>
+                <p class="meta">2025.03 - 2025.07 · Algorithm & System Lead</p>
+                <ul class="pipeline-tags">
+                  <li>3D spatial reasoning</li>
+                  <li>JSON geometry grammar</li>
+                </ul>
+              </div>
+              <figure class="pipeline-image" onclick="event.stopPropagation(); openImageModal(this.querySelector('img'))">
+                <img src="images/portfolio_PAGES/PIPE3.png" alt="HOMES BY AI" />
+              </figure>
+            </article>
+
+            <!-- Pipeline 4: VISUAL SYMPHONY -->
+            <article class="pipeline-card" onclick="window.location.href='portfolio.html#project-4'" style="cursor: pointer;">
+              <div class="pipeline-info">
+                <h3>VISUAL SYMPHONY</h3>
+                <h4>The Concrete Forms of Music in Vienna</h4>
+                <p class="meta">2024.01 - 2024.07 · Researcher & Designer</p>
+                <ul class="pipeline-tags">
+                  <li>Music-spectrum-driven geometry</li>
+                  <li>Generative structures</li>
+                </ul>
+                <span class="badge-individual">Individual work</span>
+              </div>
+              <figure class="pipeline-image" onclick="event.stopPropagation(); openImageModal(this.querySelector('img'))">
+                <img src="images/portfolio_PAGES/PIPE4.png" alt="VISUAL SYMPHONY" />
+              </figure>
+            </article>
+          </div>
+
+          <div class="actions" style="margin-top: 3rem; text-align: center;">
+            <a href="portfolio.html" class="btn btn-primary">View Full Portfolio →</a>
           </div>
         </div>
       </section>
@@ -299,13 +304,93 @@
           <div class="cv-embed">
             <img src="images/cv/cv-preview.jpg" alt="ZHENG QI CV Preview" class="cv-image" />
           </div>
-          <div class="actions">
-            <a class="btn" href="documents/ZHENG_QI_CV.pdf" target="_blank" rel="noreferrer noopener">Download CV as PDF</a>
+        </div>
+      </section>
+
+      <!-- Awards & Certifications -->
+      <section id="awards" class="section">
+        <div class="container">
+          <h2>Awards & Certifications</h2>
+          
+          <!-- Awards Carousel -->
+          <div class="awards-carousel">
+            <button class="carousel-btn prev" onclick="changeAwardSlide(-1)">‹</button>
+            <button class="carousel-btn next" onclick="changeAwardSlide(1)">›</button>
+            <div class="carousel-slides">
+              <div class="carousel-slide active">
+                <img src="images/reward/arcasia-thesis.jpg" alt="ARCASIA Award" />
+              </div>
+              <div class="carousel-slide">
+                <img src="images/reward/urban-perception.jpg" alt="Award" />
+              </div>
+            </div>
+            <div class="carousel-indicators">
+              <span class="indicator active" onclick="goToAwardSlide(0)"></span>
+              <span class="indicator" onclick="goToAwardSlide(1)"></span>
+            </div>
+          </div>
+
+          <!-- Awards List -->
+          <div class="awards-list">
+            <h3>Individual Recognition</h3>
+            <ul>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>Top Ten Outstanding Student Models in Tianjin University - 2023</span>
+              </li>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>Gold Award in the ARCASIA Student Thesis (Graduation Project) Competition - 2023</span>
+                <a href="https://arcasia.org/awards/winners-arcasia-thesis-of-the-year-toy-2023/" target="_blank" class="award-link">Link ↗</a>
+              </li>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>Undergraduate National Scholarship - 2022/2021/2019</span>
+              </li>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>Tianjin University Science and Technology Talent - 2021</span>
+              </li>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>First Prize of UIA-HYP CUP International Competition in Architectural Design - 2021</span>
+                <a href="https://www.tju.edu.cn/english/info/1010/5901.htm" target="_blank" class="award-link">Link ↗</a>
+              </li>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>Excellence Award of TianZuo Cup Design Competition - 2021</span>
+              </li>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>Tianjin University School of Architecture Top Ten Youth - 2021</span>
+              </li>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>China Architecture Newcomer Competition TOP16 - 2021</span>
+              </li>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>Tianjin University Sports Advanced Individual - 2020</span>
+              </li>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>Outstanding Cadre of Tianjin University - 2020</span>
+              </li>
+            </ul>
+
+            <h3>Team Recognition</h3>
+            <ul>
+              <li>
+                <span class="award-icon">🏆</span>
+                <span>Selected for NVIDIA Inception and MIT AI Venture Studio Programs (AlloTech, 2024)</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
       <!-- Blog / Insights -->
+      <!-- Temporarily commented out - no articles yet
       <section id="blog" class="section">
         <div class="container">
           <div class="section-header">
@@ -331,6 +416,7 @@
           </div>
         </div>
       </section>
+      -->
 
       <!-- Contact -->
       <section id="contact" class="section">
@@ -373,7 +459,78 @@
       </div>
     </div>
 
+    <!-- Image Modal for Pipeline Images -->
+    <div id="image-modal" class="image-modal">
+      <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
+      <img id="modal-image" src="" alt="" />
+    </div>
+
     <script src="js/main.js?v=6"></script>
+    <script>
+      // Image modal functions
+      function openImageModal(img) {
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-image');
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeImageModal() {
+        const modal = document.getElementById('image-modal');
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+
+      // Close on ESC key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeImageModal();
+        }
+      });
+
+      // Close on background click
+      document.getElementById('image-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'image-modal') {
+          closeImageModal();
+        }
+      });
+
+      // Awards Carousel
+      let currentAwardSlide = 0;
+      const awardSlides = document.querySelectorAll('.carousel-slide');
+      const awardIndicators = document.querySelectorAll('.carousel-indicators .indicator');
+
+      function showAwardSlide(index) {
+        awardSlides.forEach(slide => slide.classList.remove('active'));
+        awardIndicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        if (index >= awardSlides.length) {
+          currentAwardSlide = 0;
+        } else if (index < 0) {
+          currentAwardSlide = awardSlides.length - 1;
+        } else {
+          currentAwardSlide = index;
+        }
+        
+        awardSlides[currentAwardSlide].classList.add('active');
+        awardIndicators[currentAwardSlide].classList.add('active');
+      }
+
+      function changeAwardSlide(direction) {
+        showAwardSlide(currentAwardSlide + direction);
+      }
+
+      function goToAwardSlide(index) {
+        showAwardSlide(index);
+      }
+
+      // Auto-play carousel
+      setInterval(() => {
+        changeAwardSlide(1);
+      }, 5000);
+    </script>
   </body>
   </html>
 

@@ -495,3 +495,597 @@ a { color: inherit; text-decoration: none; }
 .to-top { border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; }
 
 
+
+
+/* Pipeline Grid Styles */
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.pipeline-card {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  gap: 3rem;
+  padding: 2rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+}
+
+.pipeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.pipeline-image {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f5f5f5;
+  width: 500px;
+  justify-self: end;
+}
+
+.pipeline-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pipeline-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pipeline-info h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.pipeline-info h4 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-muted, #666);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.pipeline-info .meta {
+  font-size: 0.85rem;
+  color: var(--text-muted, #666);
+  margin: 0.25rem 0;
+}
+
+.pipeline-tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.pipeline-tags li {
+  background: var(--bg-secondary, #f5f5f5);
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--text-color, #000);
+}
+
+.badge-individual {
+  display: inline-block;
+  background: var(--text-color, #000);
+  color: var(--bg-color, #fff);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pipeline-card {
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+  }
+  
+  .pipeline-image {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pipeline-grid {
+    gap: 2rem;
+  }
+  
+  .pipeline-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .pipeline-image {
+    width: 100%;
+    justify-self: center;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .pipeline-image {
+    background: #2a2a2a;
+  }
+  
+  .pipeline-tags li {
+    background: #2a2a2a;
+  }
+  
+  .pipeline-card:hover {
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+  }
+}
+
+
+/* Work Experience Cards with Logos */
+.work-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.work-card {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.work-card.featured {
+  border: 2px solid var(--text-color, #000);
+}
+
+.company-logo-right {
+  max-width: 220px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  justify-self: end;
+}
+
+.company-logos-group {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-self: end;
+  max-width: 200px;
+}
+
+.company-logos-group .company-logo-right {
+  justify-self: auto;
+  max-width: 90px;
+  max-height: 70px;
+}
+
+.work-content h4 {
+  font-size: 1.3rem;
+  margin: 0 0 0.25rem 0;
+  font-weight: 600;
+}
+
+.work-content .meta {
+  font-size: 0.9rem;
+  color: var(--text-muted, #666);
+  margin: 0;
+}
+
+.work-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.achievements .badge {
+  background: var(--bg-secondary, #f5f5f5);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--text-color, #000);
+}
+
+/* Research Section */
+.work-section {
+  margin-bottom: 4rem;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .work-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .company-logo-right {
+    max-width: 120px;
+    max-height: 50px;
+    justify-self: center;
+  }
+  
+  .company-logos-group {
+    justify-self: center;
+    max-width: 120px;
+  }
+  
+  .company-logos-group .company-logo-right {
+    max-width: 55px;
+    max-height: 40px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .work-card:hover {
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+  }
+  
+  .achievements .badge {
+    background: #2a2a2a;
+  }
+}
+
+
+/* Individual work badge */
+.badge-individual {
+  display: inline-block;
+  background: var(--text-color, #000);
+  color: var(--bg-color, #fff);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+
+/* Image Modal for Pipeline Images */
+.image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  z-index: 10000;
+}
+
+.image-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Pipeline image clickable */
+.pipeline-image {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.pipeline-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.pipeline-image::after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.pipeline-image:hover::before,
+.pipeline-image:hover::after {
+  opacity: 1;
+}
+
+/* Primary button style */
+.btn-primary {
+  background: var(--text-color, #000);
+  color: var(--bg-color, #fff);
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid var(--text-color, #000);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+  background: var(--bg-color, #fff);
+  color: var(--text-color, #000);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .btn-primary {
+    background: var(--bg-color, #fff);
+    color: var(--text-color, #000);
+    border-color: var(--bg-color, #fff);
+  }
+  
+  .btn-primary:hover {
+    background: var(--text-color, #000);
+    color: var(--bg-color, #fff);
+  }
+}
+
+
+/* Awards & Certifications Section */
+.awards-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 3rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn.prev {
+  left: 1rem;
+}
+
+.carousel-btn.next {
+  right: 1rem;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.carousel-indicators .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-indicators .indicator.active {
+  background: white;
+}
+
+/* Awards List */
+.awards-list {
+  margin-top: 3rem;
+}
+
+.awards-list h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+}
+
+.awards-list h3:first-child {
+  margin-top: 0;
+}
+
+.awards-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.awards-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color, #e0e0e0);
+}
+
+.awards-list li:last-child {
+  border-bottom: none;
+}
+
+.award-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.awards-list li span:not(.award-icon) {
+  flex: 1;
+  line-height: 1.6;
+}
+
+.award-link {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  background: var(--text-color, #000);
+  color: var(--bg-color, #fff);
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  transition: opacity 0.3s;
+}
+
+.award-link:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .carousel-btn.prev {
+    left: 0.5rem;
+  }
+  
+  .carousel-btn.next {
+    right: 0.5rem;
+  }
+  
+  .awards-list li {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .award-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .award-link {
+    background: var(--bg-color, #fff);
+    color: var(--text-color, #000);
+  }
+  
+  .carousel-btn {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
