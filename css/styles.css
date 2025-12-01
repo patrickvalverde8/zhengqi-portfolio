@@ -675,13 +675,13 @@ a { color: inherit; text-decoration: none; }
   gap: 1.5rem;
   align-items: center;
   justify-self: end;
-  max-width: 200px;
+  max-width: 240px;
 }
 
 .company-logos-group .company-logo-right {
   justify-self: auto;
-  max-width: 90px;
-  max-height: 70px;
+  max-width: 110px;
+  max-height: 85px;
 }
 
 .work-content h4 {
@@ -1013,23 +1013,34 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid var(--border-color, #e0e0e0);
+  position: relative;
+  padding-left: 1.5rem;
 }
 
 .awards-list li:last-child {
   border-bottom: none;
 }
 
+.awards-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1rem;
+  width: 6px;
+  height: 6px;
+  background: var(--text-color, #000);
+  border-radius: 50%;
+}
+
 .award-icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  margin-top: 0.2rem;
+  display: none;
 }
 
 .awards-list li span:not(.award-icon) {
   flex: 1;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .award-link {
@@ -1065,12 +1076,7 @@ a { color: inherit; text-decoration: none; }
   }
   
   .awards-list li {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .award-icon {
-    font-size: 1.2rem;
+    padding: 0.6rem 0;
   }
 }
 
@@ -1088,4 +1094,11 @@ a { color: inherit; text-decoration: none; }
   .carousel-btn:hover {
     background: rgba(255, 255, 255, 0.3);
   }
+}
+
+
+/* Specific logo size adjustments */
+.logo-small {
+  max-width: 140px !important;
+  max-height: 65px !important;
 }

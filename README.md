@@ -1,35 +1,63 @@
-# ZHENG QI — AI + Design + Human Factors (Static Site)
+# ZHENG QI — Personal Website
 
-Pure static single-page site: HTML + CSS + JS. Minimalist black/white academic style with a theme toggle on the tagline.
+Professional portfolio website showcasing AI research, design projects, and academic achievements.
+
+## Features
+
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
+- **Portfolio Gallery**: Interactive image lightbox with keyboard navigation
+- **Awards Carousel**: Auto-playing slideshow of achievements
+- **Dark Mode Support**: Automatic theme switching based on system preferences
+- **Interactive Elements**: Clickable project cards, image zoom, smooth scrolling
 
 ## Structure
-- `index.html` — all sections and content
-- `css/styles.css` — theme tokens, typography and layout
-- `js/main.js` — theme toggle, smooth scroll, sticky nav shadow
 
-## Run locally
-Use any static server. Quickest (Python):
+```
+├── index.html              # Main homepage
+├── portfolio.html          # Detailed portfolio page
+├── css/
+│   ├── styles.css         # Main styles
+│   └── portfolio.css      # Portfolio page styles
+├── js/
+│   ├── main.js           # Core functionality
+│   └── portfolio.js      # Portfolio interactions
+└── images/
+    ├── cv/               # CV preview
+    ├── logos/            # Company logos
+    ├── portfolio_PAGES/  # Portfolio images
+    ├── portraits/        # Profile photos
+    └── reward/           # Award photos
+```
 
+## Run Locally
+
+Using Python:
 ```bash
 python -m http.server 5500
 ```
 
-Then open `http://localhost:5500/`.
+Then open `http://localhost:5500/`
 
-## Deploy to Netlify
-1. Drag-and-drop the project folder into Netlify Dashboard, or connect a Git repo.
+## Deploy
+
+### Vercel (Recommended)
+```bash
+vercel
+```
+
+### Netlify
+1. Connect your Git repository
 2. Build command: (leave empty)
-3. Publish directory: `/` (project root)
+3. Publish directory: `/`
 
-## Replace placeholders
-- Images: replace `https://placehold.co/...` URLs in `index.html` with your images or add files under `assets/` and update the `src` attributes.
-- CV: update the CV link in the CV section.
-- Social links: update LinkedIn/GitHub/Google Scholar `href` values.
+## Technologies
 
-## Fonts
-- Titles: Ibarra Real Nova
-- Body: Spectral
+- Pure HTML5, CSS3, JavaScript (no frameworks)
+- Google Fonts: Crimson Text, Spectral
+- Responsive grid layouts
+- CSS animations and transitions
 
 ## License
-All code MIT. Content © ZHENG QI.
+
+Content © 2025 ZHENG QI. All rights reserved.
 
